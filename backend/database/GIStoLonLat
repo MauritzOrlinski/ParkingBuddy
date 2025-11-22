@@ -1,0 +1,70 @@
+import pandas as pd
+from pyproj import Transformer
+
+# Load CSV
+df = pd.read_csv("opendata_ruhver_parkseiten_line_Edited.csv")
+
+# Coordinate transformer (update EPSG if needed)
+transformer = Transformer.from_crs(25832, 4326, always_xy=True)
+
+
+def cell_to_latlng(cell):
+    # Convert to string
+    cell = str(cell).strip()
+
+    # Skip empty or invalid
+    if cell.lower() in ["", "nan", "none"]:
+        return "[]"
+
+    # Remove LINESTRING syntax
+    cell = (
+        cell.replace("LINESTRING", "")
+            .replace("(", "")
+            .replace(")", "")
+            .strip()
+    )
+
+    if cell == "":
+        return "[]"
+
+    # Parse points
+    try:
+        points = cell.split(",")
+        x_coords = []
+        y_coords = []
+
+        for pt in points:
+            parts = pt.strip().split()
+            if len(parts) != 2:
+                continue
+            x, y = map(float, parts)
+            x_coords.append(x)
+            y_coords.append(y)
+
+        if len(x_coords) == 0:
+            return "[]"
+
+        # Convert to lat/lng
+        lons, lats = transformer.transform(x_coords, y_coords)
+
+        # Build JS objects
+        js_list = [
+            f"{{ lat: {lat:.6f}, lng: {lng:.6f} }}"
+            for lat, lng in zip(lats, lons)
+        ]
+
+        return "[ " + ", ".join(js_list) + " ]"
+
+    except:
+        return "[]"
+
+
+# 🟢 APPLY to the column containing your GIS data
+df["js_latlng"] = df["shape (LINESTRING)"].apply(cell_to_latlng)
+
+# 🟢 SAVE NEW CSV
+df.to_csv("opendata_ruhver_parkseiten_line_Edited_converted.csv", index=False)
+
+print("Conversion complete! File saved as 'park_spaces_converted.csv'")
+
+
