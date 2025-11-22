@@ -1,0 +1,54 @@
+﻿_id,name_anlage,adresse,latitude,longitude,stellplaetze_gesamt,stellplaetze_beh.,stellplaetze_frauen,stellplaetze_fam,stellplaetze_elektro,stellplaetze_motorraeder,bauform,einfahrtshoehe,schrankenbetrieb,hoechstparkdauer,parkpreis_einzel,parkpreis_zehner_eur,parkpreis_monat_eur,parkpreis_jahr_eur,preisstufe,oepnv-anbindung
+1,Aidenbachstraße,"Gmunder Str. 40, 81379 München","48°05'51.0""N","11°31'28.3""E",188,5,7,,,,Parkhaus,"2,10 m",Nein,24 Stunden,"2,00 EUR","18,00 EUR","22,00 EUR","220,00 EUR",2,U3
+2,Allach,"Oertelplatz (2), 80999 München","48°11'21.1""N","11°28'02.0""E",128,2,8,,4,,Tiefgarage,"2,10 m","Ja, mit Kfz-Kennzeichenerkennung",24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S2
+3,Aubing,"Georg-Böhmer-Str., 81245 München","48°09'22.5""N","11°24'49.3""E",53,1,5,1,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S4
+4,Daglfing,"Ludwig-Brück-Str. 3a, 81929 München","48°08'52.6""N","11°38'59.9""E",101,2,8,1,,,Parkplatz,-,Nein,Mehrtagesparken mit Sondertarif möglich,"P+R Tarif: 1,50 EUR (1. Tag)
+Jeder weitere Tag 4,00 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S8
+5,Feldmoching,"Dülferstr. (69), 80995 München","48°12'52.4""N","11°32'31.4""E",156,2,,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,"S1, U2"
+6,Freiham (Provisorium),"Bodenseestr. (322), 81249 München","48°08'26.4""N","11°24'33.4""E",74,2,6,1,,,Parkplatz,-,Nein,Mehrtagesparken mit Sondertarif möglich,"P+R Tarif: 1,50 EUR (1. Tag)
+Jeder weitere Tag 4,00 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S8
+7,Fröttmaning,"W.-Heisenberg-Allee 21, 80939 München","48°12'36.9""N","11°37'12.9""E",1259,10,35,8,8,4,Parkhaus,"2,10 m","Ja, mit Kfz-Kennzeichenerkennung","keine Parkzeitbeschränkung
+(Mehrtagesparken mit Sondertarif möglich)","P+R Tarif: 1,50 EUR (1. Tag),
+jeder weitere Tag: 4,00 EUR
+
+Standardtarif (z.B. Besucher*innen Arena): 10,00 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,U6
+8,Fürstenried-West PP,"Neurieder Str., 81475 München","48°05'15.7""N","11°28'59.5""E",50,,,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,U3
+9,Fürstenried-West TG,"Neurieder Str., 81475 München","48°05'21.1""N","11°28'30.6""E",214,1,15,,,,Tiefgarage,"2,10 m","Ja, mit Kfz-Kennzeichenerkennung",24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,U3
+10,Großhadern (Klinikum),"Max-Lebsche-Platz, 81377 München","48°06'30.6""N","11°28'24.1""E",308,3,7,5,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,U6
+11,Heimeranplatz,"Garmischer Str. 19, 81373 München","48°07'53.4""N","11°31'53.6""E",310,3,31,4,,,Tiefgarage,"2,10 m","Ja, mit Kfz-Kennzeichenerkennung",24 Stunden,"P+R Tarif: 2,00 EUR
+
+Standardtarif (z.B. Besucher*innen des Bürogebäudes): 3,00 EUR pro Stunde
+ Tagesmax.: 20,00 EUR","18,00 EUR","22,00 EUR","220,00 EUR",2,"U4, U5, S7"
+12,Innsbrucker Ring,"Bad-Schachener-Str. 41, 81671 München","48°07'14.4""N","11°37'05.7""E",89,1,8,,,,Tiefgarage,"2,10 m",Nein,24 Stunden,"2,00 EUR","18,00 EUR","22,00 EUR","220,00 EUR",2,"U2, U5"
+13,Karlsfeld Ost,"Zum Schwabenbächl (39), 80997 München","48°12'39.0""N","11°27'39.6""E",105,2,,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S2
+14,Karlsfeld West,"Eversbuschstr., 80999 München","48°12'37.6""N","11°27'33.5""E",102,2,,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S2
+15,Kieferngarten,"Kieferngartenstr. 14, 80939 München","48°12'06.9""N","11°36'43.8""E",235,3,,,,,Parkhaus,"1,90 m","Ja, mit Kfz-Kennzeichenerkennung",24 Stunden,"2,00 EUR","18,00 EUR","22,00 EUR","220,00 EUR",2,U6
+16,Langwied,"Bergsonstraße, 81245 München","48°09'45.7""N","11°25'54.5""E",102,1,,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S3
+17,Lochhausen-Nord,"Lochhausener Str. 215, 81249 München","48°10'34.4""N","11°24'33.0""E",139,2,,2,4,5,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S3
+18,Lochhausen-Süd,"Henschelstr., 81249 München","48°10'32.5""N","11°24'32.3""E",43,,,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S3
+19,Mangfallplatz ,"Am Hollerbusch 22, 81547 München","48°05'44.1""N","11°34'28.6""E",252,3,24,4,,,Tiefgarage,"2,10 m","Ja, mit Kfz-Kennzeichenerkennung",24 Stunden,"2,00 EUR","18,00 EUR","22,00 EUR","220,00 EUR",2,U1
+20,Messestadt-Ost,"Willy-Brandt-Allee 11, 81829 München","48°08'03.5""N","11°42'20.3""E",1075,14,47,,8,,Parkhaus,"2,10 m","Ja, mit Kfz-Kennzeichenerkennung","keine Parkzeitbeschränkung
+(Mehrtagesparken mit Sondertarif möglich)","P+R Tarif: 1,50 EUR (1. Tag),
+jeder weitere Tag: 4,00 EUR
+
+Standardtarif (z.B. Besucher*innen Messe): 21,00 EUR/16,00 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,U2
+21,Michaelibad,"Heinrich-Wieland-Str. 5, 81735 München","48°07'09.1""N","11°37'55.0""E",217,,,,,,Parkplatz,-,Nein,24 Stunden,"2,00 EUR","18,00 EUR","22,00 EUR","220,00 EUR",2,U5
+22,Moosach,"Memminger Platz 1, 80997 München","48°10'50.5""N","11°30'19.2""E",280,3,38,4,,3,Tiefgarage,"2,10 m","Ja, mit Kfz-Kennzeichenerkennung","keine Parkzeitbeschränkung
+(längeres Parken mit Sondertarif möglich)","P+R Tarif: 1,50 EUR (1. Tag)
+Jede weitere Stunde 1,00 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,"S1, U3"
+23,Neuperlach Süd,"Carl-Wery-Str. 37, 81739 München","48°05'13.1""N","11°38'46.1""E",770,8,,,80,,Parkhaus,"2,10 m","Ja, mit Kfz-Kennzeichenerkennung",24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,"S7, U5"
+24,Oberwiesenfeld,"Moosacher Str. (95), 80809 München","48°11'09.5""N","11°32'38.3""E",148,1,,2,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,U3
+25,Olympiazentrum,"Helene-Mayer-Ring 3, 80809 München","48°10'49.5""N","11°33'13.9""E",273,3,16,,,,Parkhaus,"2,00 m","Ja, mit Kfz-Kennzeichenerkennung",24 Stunden,"P+R Tarif: 2,00 EUR (1. Tag)
+
+Standardtarif (z.B. Besucher*innen Olympiapark): 5,00 EUR (bis 2 Stunden)
+jede weitere Stunde: 2,00 EUR
+Tagesmax: 20,00 EUR","18,00 EUR","22,00 EUR","220,00 EUR",2,U3
+26,Perlach,"Stephensonplatz (1), 81737 München","48°05'37.0""N","11°37'52.0""E",50,2,,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S7
+27,Riem,"Mittbacher Str., 81829 München","48°08'38.0""N","11°40'41.6""E",80,2,3,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,S2
+28,Solln,"Friedastraße, 81479 München","48°04'48.9""N","11°31'38.3""E",72,2,,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,"S7, S20"
+29,Studentenstadt,"Ungererstraße, 80805 München","48°11'02.8""N","11°36'25.0""E",405,,20,,,,Parkplatz,-,Nein,24 Stunden,"2,00 EUR","18,00 EUR","22,00 EUR","220,00 EUR",2,U6
+30,Trudering-Nord,"Birthälmerstr. (18), 81829 München","48°07'36.7""N","11°39'48.7""E",173,4,11,,4,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,"S4, S6, U2"
+31,Trudering-Süd,"Truderinger Str., 81829 München","48°07'33.0""N","11°39'45.0""E",32,2,,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,"S4, S6, U2"
+32,Westfriedhof PP,"Orpheusstr. (1), 80992 München","48°10'17.4""N","11°31'41.8""E",113,3,,,,,Parkplatz,-,"Ja, mit Kfz-Kennzeichenerkennung",24 Stunden,"2,00 EUR","18,00 EUR","22,00 EUR","220,00 EUR",2,U1
+33,Westfriedhof TG,"Orpheusstr. 1, 80992 München","48°10'19.1""N","11°31'42.1""E",219,2,15,,,,Tiefgarage,"2,10 m","Ja, mit Kfz-Kennzeichenerkennung",24 Stunden,"2,00 EUR","18,00 EUR","22,00 EUR","220,00 EUR",2,U1
+34,Westkreuz,"Haberlandstr., 81241 München","48°08'56.5""N","11°26'44.4""E",126,,,,,,Parkplatz,-,Nein,24 Stunden,"1,50 EUR","12,00 EUR","13,00 EUR","130,00 EUR",1,"S6, S8"

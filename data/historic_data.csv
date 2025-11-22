@@ -1,0 +1,35 @@
+﻿_id,p+r_anlage,wt_06-07_uhr,sa_06-07_uhr,so_06-07_uhr,wt_07-08_uhr,sa_07-08_uhr,so_07-08_uhr,wt_08-09_uhr,sa_08-09_uhr,so_08-09_uhr,wt_09-10_uhr,sa_09-10_uhr,so_09-10_uhr,wt_10-12_uhr,sa_10-12_uhr,so_10-12_uhr,wt_12-14_uhr,sa_12-14_uhr,so_12-14_uhr,wt_14-16_uhr,sa_14-16_uhr,so_14-16_uhr,wt_16-18_uhr,sa_16-18_uhr,so_16-18_uhr,wt_18-20_uhr,sa_18-20_uhr,so_18-20_uhr,wt_20-06_uhr,sa_20-06_uhr,so_20-06_uhr
+1,Aidenbachstraße,grün,grün,grün,grün,grün,grün,grün,grün,grün,gelb,grün,grün,rot,grün,grün,rot,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+2,Allach,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+3,Aubing,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+4,Daglfing,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb
+5,Feldmoching,grün,grün,grün,grün,grün,grün,grün,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+6,Freiham (Provisorium),gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün
+7,Fröttmaning,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+8,Fürstenried-West (PP),grün,grün,grün,gelb,grün,grün,rot,grün,grün,rot,grün,grün,rot,grün,grün,rot,grün,grün,rot,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+9,Fürstenried-West (TG),grün,grün,grün,gelb,grün,grün,rot,grün,grün,rot,grün,grün,rot,grün,grün,rot,grün,grün,rot,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+10,Großhadern,grün,grün,grün,grün,grün,grün,gelb,grün,grün,rot,grün,grün,rot,grün,grün,rot,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+11,Heimeranplatz,grün,grün,grün,grün,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+12,Innsbrucker Ring,grün,grün,grün,grün,grün,grün,grün,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+13,Karlsfeld-Ost,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+14,Karlsfeld-West,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+15,Kieferngarten,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+16,Langwied,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+17,Lochhausen-Nord,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+18,Lochhausen-Süd,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+19,Mangfallplatz,grün,grün,grün,grün,grün,grün,grün,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+20,Messestadt-Ost,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+21,Michaelibad,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+22,Moosach,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+23,Neuperlach Süd,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+24,Oberwiesenfeld,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb,gelb
+25,Olympiazentrum,grün,grün,grün,grün,grün,grün,gelb,grün,grün,rot,grün,grün,rot,grün,grün,rot,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+26,Perlach,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+27,Riem,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+28,Solln,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+29,Studentenstadt,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,gelb,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+30,Trudering-Nord,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+31,Trudering-Süd,grün,grün,grün,grün,grün,grün,grün,grün,grün,gelb,grün,grün,rot,grün,grün,rot,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+32,Westfriedhof (PP),grün,grün,grün,grün,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,gelb,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+33,Westfriedhof (TG),grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
+34,Westkreuz,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün,grün
