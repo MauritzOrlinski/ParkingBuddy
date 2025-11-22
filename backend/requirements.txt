@@ -39,3 +39,12 @@ uvicorn==0.38.0
 uvloop==0.22.1
 watchfiles==1.1.1
 websockets==15.0.1
+
+# Added for authentication and DB
+sqlalchemy>=2.0
+passlib[bcrypt]>=1.7.0
+python-jose[cryptography]>=3.3.0
+psycopg2-binary>=2.9.0
+
+# Argon2 for password hashing (preferred over bcrypt)
+argon2-cffi>=21.3.0
