@@ -34,7 +34,7 @@ function MapPage({ user }) {
     <div className="screen">
       <header className="header header--map">
         <div className="header-left">
-          <h1 className="logo">ParkTime</h1>
+          <h1 className="logo">Parking Buddy</h1>
         </div>
         <div className="header-right">
           <span className="header-username">

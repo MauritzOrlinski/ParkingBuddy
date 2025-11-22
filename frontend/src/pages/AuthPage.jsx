@@ -116,7 +116,7 @@ function AuthPage({ onLogin }) {
   return (
     <div className="screen">
       <header className="header">
-        <h1 className="logo">ParkTime</h1>
+        <h1 className="logo">Parking Buddy</h1>
       </header>
 
       <main className="screen-main">

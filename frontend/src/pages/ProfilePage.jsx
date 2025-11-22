@@ -64,7 +64,7 @@ function ProfilePage({ user, onLogout }) {
             </div>
 
             <div className="stat-card">
-              <p className="stat-label">Before ParkTime</p>
+              <p className="stat-label">Before Parking Buddy</p>
               <p className="stat-value">
                 {stats.avgParkingSearchBeforeMinutes ?? 0} min
               </p>
@@ -72,7 +72,7 @@ function ProfilePage({ user, onLogout }) {
             </div>
 
             <div className="stat-card">
-              <p className="stat-label">Now with ParkTime</p>
+              <p className="stat-label">Now with Parking Buddy</p>
               <p className="stat-value">
                 {stats.avgParkingSearchNowMinutes ?? 0} min
               </p>

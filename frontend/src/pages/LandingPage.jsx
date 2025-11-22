@@ -5,14 +5,14 @@ function LandingPage({ isLoggedIn }) {
   return (
     <div className="screen">
       <header className="header">
-        <h1 className="logo">ParkTime</h1>
+        <h1 className="logo">Parking Buddy</h1>
       </header>
 
       <main className="screen-main">
         <section className="hero">
           <h2 className="hero-title">Stop wasting time parking ⏱️</h2>
           <p className="hero-subtitle">
-            ParkTime estimates your total travel time by including how long it
+            Parking Buddy estimates your total travel time by including how long it
             usually takes you to find a parking spot — so you can leave at the
             right moment and arrive relaxed.
           </p>
@@ -63,7 +63,7 @@ function LandingPage({ isLoggedIn }) {
       </main>
 
       <footer className="footer">
-        <p className="footer-text">© {new Date().getFullYear()} ParkTime</p>
+        <p className="footer-text">© {new Date().getFullYear()} Parking Buddy</p>
       </footer>
     </div>
   );
