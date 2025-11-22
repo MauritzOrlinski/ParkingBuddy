@@ -1,34 +1,47 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
+import MapComponent from "../components/maps";
 
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-
+const myRouteData = [
+  {
+    lat: 48.13513,
+    lng: 11.58198,
+    waitingTime: "10 minutes",
+    label: "Munich Stop 1",
+  },
+  { lat: 48.14, lng: 11.57, waitingTime: "5 minutes", label: "Munich Stop 2" },
+];
 function MapPage({ user }) {
-  useEffect(() => {
-    // If Google Maps is already there, just re-init
-    if (window.google && window.google.maps && typeof window.initMap === "function") {
-      window.initMap();
-      return;
-    }
-
-    const parkingScript = document.createElement("script");
-    parkingScript.src = "/parking-lines.js"; // from public/
-    parkingScript.async = true;
-
-    parkingScript.onload = () => {
-      const googleScript = document.createElement("script");
-      googleScript.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&callback=initMap`;
-      googleScript.async = true;
-      googleScript.defer = true;
-      document.body.appendChild(googleScript);
-    };
-
-    parkingScript.onerror = () => {
-      console.error("Failed to load parking-lines.js");
-    };
-
-    document.body.appendChild(parkingScript);
-  }, []);
+  // useEffect(() => {
+  //   // If Google Maps is already there, just re-init
+  //   if (
+  //     window.google &&
+  //     window.google.maps &&
+  //     typeof window.initMap === "function"
+  //   ) {
+  //     window.initMap();
+  //     return;
+  //   }
+  //
+  //   const parkingScript = document.createElement("script");
+  //   parkingScript.src = "/parking-lines.js"; // from public/
+  //   parkingScript.async = true;
+  //
+  //   parkingScript.onload = () => {
+  //     const googleScript = document.createElement("script");
+  //     googleScript.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}&callback=initMap`;
+  //     googleScript.async = true;
+  //     googleScript.defer = true;
+  //     document.body.appendChild(googleScript);
+  //   };
+  //
+  //   parkingScript.onerror = () => {
+  //     console.error("Failed to load parking-lines.js");
+  //   };
+  //
+  //   document.body.appendChild(parkingScript);
+  // }, []);
 
   return (
     <div className="screen map-screen">
@@ -47,7 +60,7 @@ function MapPage({ user }) {
       </header>
 
       <main className="screen-main map-screen-main">
-        <div id="map" className="map-container" />
+        <MapComponent apiKey={GOOGLE_MAPS_API_KEY} locations={myRouteData} />
       </main>
     </div>
   );
