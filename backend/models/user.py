@@ -23,3 +23,12 @@ class Parking(Base):
     latitude = Column(Float, nullable=False)
     longitude = Column(Float, nullable=False)
     parking_type = Column(String, nullable=False)
+
+class HistoryEvent(Base):
+    __tablename__ = "history"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, nullable=False)
+    parking_id = Column(String, nullable=False)
+    saved_time = Column(Float, nullable=False)
+    timestamp = Column(DateTime, default=datetime.utcnow)

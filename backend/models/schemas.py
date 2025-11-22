@@ -30,6 +30,20 @@ class ParkingRead(BaseModel):
     class Config:
         from_attributes = True
 
+class HistoryEventCreate(BaseModel):
+    parking_id: str
+    saved_time: float
+
+class HistoryEventRead(BaseModel):
+    id: int
+    user_id: int
+    parking_id: str
+    saved_time: float
+    timestamp: datetime
+
+    class Config:
+        from_attributes = True
+
 
 class Token(BaseModel):
     access_token: str

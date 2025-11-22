@@ -4,6 +4,7 @@ CREATE EXTENSION IF NOT EXISTS postgis;
 -- Drop tables if they exist
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS parking;
+DROP TABLE IF EXISTS history;
 
 -- Create users table (unchanged)
 CREATE TABLE users (
@@ -29,6 +30,14 @@ CREATE TABLE parking (
     longitude DOUBLE PRECISION,
     parking_type VARCHAR(50),
     geom GEOGRAPHY(Point, 4326)  -- GIS column for coordinates
+);
+
+CREATE TABLE history (
+    id SERIAL PRIMARY KEY,
+    user_id INTEGER REFERENCES users(id),
+    parking_id VARCHAR(200) REFERENCES parking(id),
+    saved_time NUMERIC,
+    timestamp TIMESTAMP WITHOUT TIME ZONE NOT NULL DEFAULT NOW()
 );
 
 -- Import CSV (lat/lon will populate numeric columns)

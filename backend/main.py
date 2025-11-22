@@ -127,3 +127,25 @@ def read_nearest(
         }
         for row in results
     ]
+
+@app.post("/history", response_model=schemas.HistoryEventRead, status_code=status.HTTP_201_CREATED)
+def create_history_event(
+    event_in: schemas.HistoryEventCreate,
+    current_user: user_model.User = Depends(auth.get_current_user),
+    db: Session = Depends(auth.get_db)
+):
+    event = user_model.HistoryEvent(
+        user_id=current_user.id,
+        parking_id=event_in.parking_id,
+        saved_time=event_in.saved_time
+    )
+
+    # add event to DB
+    db.add(event)
+    db.commit()
+    db.refresh(event)
+
+    # update user's total saved time
+    current_user.saved_time += event_in.saved_time
+    db.commit()
+    return event
