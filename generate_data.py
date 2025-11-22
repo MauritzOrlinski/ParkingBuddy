@@ -1,7 +1,7 @@
 import pandas as pd
 import numpy as np
 from datetime import datetime, timedelta
-import os
+import re
 
 # ==========================================
 # 1. CONFIGURATION & FILES
@@ -9,6 +9,7 @@ import os
 
 HISTORIC_DATA_FILE = "data/historic_data.csv"
 GARAGE_DATA_FILE = "data/parking_garage.csv"
+COMBINED_DATA_FILE = "data/combined_parking_data.csv"
 OUTPUT_FILE = "data/synthetic_parking_occupancy.csv"
 
 # Configuration for generation
@@ -34,9 +35,38 @@ df_patterns = pd.read_csv(HISTORIC_DATA_FILE)
 print(f"Loading garage details from {GARAGE_DATA_FILE}...")
 df_garages = pd.read_csv(GARAGE_DATA_FILE)
 
+
 # ==========================================
 # 3. HELPER FUNCTIONS
 # ==========================================
+
+
+def dms_to_decimal(dms_str):
+    """
+    Parses a DMS string (e.g., "48°08'56.5""N") into decimal degrees.
+    """
+    # 1. Clean up the string to handle potential extra quotes (like ""N)
+    clean_str = str(dms_str).replace('""', '"')
+
+    # 2. Use regex to capture Degrees, Minutes, and Seconds
+    # The pattern captures three groups of digits/decimals
+    match = re.search(r"(\d+)°(\d+)'(\d+\.?\d*)", clean_str)
+
+    if not match:
+        return None
+
+    # 3. Extract and convert groups to floating-point numbers
+    d, m, s = map(float, match.groups())
+
+    # 4. Apply the conversion formula
+    decimal = d + m / 60 + s / 3600
+
+    # Check for Southern or Western coordinates (Negative values)
+    # Your example is 'N', so we assume positive, but this is a standard addition:
+    if "S" in clean_str or "W" in clean_str:
+        return -decimal
+
+    return decimal
 
 
 def get_day_type(date_obj):
@@ -101,13 +131,14 @@ for _, row_pattern in df_patterns.iterrows():
     if not match.empty:
         capacity = match.iloc[0]["stellplaetze_gesamt"]
         address = match.iloc[0]["adresse"]
+        lat = dms_to_decimal(match.iloc[0]["latitude"])
+        lon = dms_to_decimal(match.iloc[0]["longitude"])
     else:
         # Fallback if names don't match exactly
         print(
             f"Warning: Could not find metadata for '{facility_name}'. Using defaults."
         )
-        capacity = 100
-        address = "Unknown"
+        continue
 
     # Loop through the next X days
     for i in range(DAYS_TO_GENERATE):
@@ -150,6 +181,8 @@ for _, row_pattern in df_patterns.iterrows():
                     "occupancy_rate": round(occupancy_rate, 4),
                     "occupied_spots": occupied_spots,
                     "total_capacity": capacity,
+                    "latitude": lat,
+                    "longitude": lon,
                 }
             )
 
