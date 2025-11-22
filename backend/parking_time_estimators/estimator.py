@@ -5,6 +5,9 @@ from sklearn.preprocessing import OneHotEncoder
 from sklearn.compose import ColumnTransformer
 from sklearn.pipeline import Pipeline
 
+FIXED_SEARCH_TIME = 5
+TIME_PER_SPOT = 1
+
 
 class ParkingCapacityEstimator:
     def __init__(self, csv_path):
@@ -77,6 +80,14 @@ class ParkingCapacityEstimator:
         )
 
         return float(self.model.predict(X_new)[0])
+
+    def predict_search_time(self, day_type, hour, total_capacity, latitude, longitude):
+        p = 1 - self.predict(day_type, hour, total_capacity, latitude, longitude)
+        i = 0
+        while p > 0.0001:
+            p *= p
+            i += 1
+        return i * TIME_PER_SPOT + FIXED_SEARCH_TIME
 
 
 if __name__ == "__main__":
