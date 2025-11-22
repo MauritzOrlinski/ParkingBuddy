@@ -1,0 +1,23 @@
+# Ignore local virtualenvs and Python cache to avoid copying them into the image
+.venv
+venv
+ENV
+env
+
+# Python cache
+__pycache__
+**/__pycache__
+*.pyc
+
+# dotenv and other local files
+.env
+.env.*
+
+# DB files
+*.db
+*.sqlite3
+
+# Git and docker files
+.git
+.gitignore
+Dockerfile
