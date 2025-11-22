@@ -26,7 +26,10 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - postgres_data:/var/lib/postgresql/data
+      - ./script.sql:/docker-entrypoint-initdb.d/init.sql
+      - ./data:/config/data
+    tmpfs:
+      - /var/lib/postgresql/data   # <-- no persisted data
 
 volumes:
   postgres_data:
