@@ -18,6 +18,7 @@ function formatMinutesToHoursMinutes(totalMinutes) {
 
 function ProfilePage({ user, onLogout }) {
   const stats = user?.stats || {};
+  var time = user?.saved_time;
 
   return (
     <div className="screen profile-screen">
@@ -25,7 +26,7 @@ function ProfilePage({ user, onLogout }) {
         <Link to="/map" className="back-link profile-back-link">
           ←
         </Link>
-        <div className="profile-header-center">
+        <div className="profile-henpm i @react-google-maps/apiader-center">
           <h1 className="logo profile-logo">My stats</h1>
           <p className="profile-header-subtitle">Parking-aware time saved overview</p>
         </div>
@@ -52,7 +53,7 @@ function ProfilePage({ user, onLogout }) {
             Time saved by smarter parking
           </h3>
           <p className="profile-highlight-number">
-            {formatMinutesToHoursMinutes(stats.totalTimeSavedMinutes)}
+            {formatMinutesToHoursMinutes(time)}
           </p>
           <p className="profile-highlight-subtext">
             Estimated time you didn&apos;t spend circling for parking, based on your
