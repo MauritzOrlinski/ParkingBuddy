@@ -88,3 +88,49 @@ Parkest speeds up the parking process by:
 - Showing which spot is truly the fastest option
 
 It reduces guesswork, saves time, and simplifies decision-making for drivers navigating busy urban areas.
+
+## Chart
+```mermaid
+flowchart LR
+
+    subgraph Client["Mobile-Optimized Frontend (React)"]
+        UI["React UI"]
+        GoogleAPI["Google Maps / Geocoding APIs"]
+        UI --> GoogleAPI
+    end
+
+    subgraph Backend["Backend Service (FastAPI)"]
+        API["REST API Endpoints"]
+        ML["ML Estimator (scikit-learn)"]
+        Preproc["Data Preprocessing & Model Loader"]
+    end
+
+    subgraph DB["PostgreSQL with PostGIS"]
+        DBUsers["Users"]
+        DBSpots["Parking Spots"]
+        DBEvents["Parking Events"]
+    end
+
+    subgraph DataSources["Training Data (Munich Open Data)"]
+        CSV["CSV Parking Dataset"]
+    end
+
+    %% Client interactions
+    UI -->|Request parking estimate| API
+
+    %% Backend to ML
+    API -->|Invoke prediction| ML
+    ML --> Preproc
+
+    %% Backend to DB
+    API -->|GIS nearest spot queries| DBUsers
+    API -->|GIS nearest spot queries| DBSpots
+    API -->|Fetch events| DBEvents
+
+    %% Frontend uses Google APIs
+    UI -->|Geocoding & Routing| GoogleAPI
+
+    %% Training pipeline
+    CSV --> Preproc
+    Preproc --> ML
+```
