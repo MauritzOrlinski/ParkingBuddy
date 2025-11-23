@@ -96,7 +96,7 @@ function ProfilePage({ user, onLogout }) {
 
         {/* Roadmap / upcoming */}
         <section className="card profile-card">
-          <h3 className="card-title profile-card-title">Coming soon</h3>
+          <h3 className="card-title profile-card-title">What we do</h3>
           <ul className="feature-list profile-feature-list">
             <li>🔮 Forecast travel time incl. parking for a new trip</li>
             <li>🗺️ See hotspots where parking usually takes longer</li>

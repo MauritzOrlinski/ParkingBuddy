@@ -126,9 +126,10 @@ function AuthPage({ onLogin }) {
         </div>
 
         <div className="landing-header-actions">
-          <Link to="/" className="text-link landing-header-link">
-            Back to landing
-          </Link>
+        <Link to="/" className="header-btn">
+  Back to landing
+</Link>
+
         </div>
       </header>
 

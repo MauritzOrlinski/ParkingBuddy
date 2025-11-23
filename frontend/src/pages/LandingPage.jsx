@@ -19,9 +19,10 @@ function LandingPage({ isLoggedIn }) {
               Open app →
             </Link>
           ) : (
-            <Link to="/auth" className="text-link landing-header-link">
-              Sign in
-            </Link>
+            <Link to="/auth" className="landing-header-btn">
+  Sign in
+</Link>
+
           )}
         </div>
       </header>
