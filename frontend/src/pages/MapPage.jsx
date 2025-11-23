@@ -2,9 +2,11 @@ import React, { useEffect, useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import MapComponent from "../components/maps";
 import { useJsApiLoader, Autocomplete } from "@react-google-maps/api";
+import ProfilePicture from "../components/profileimg";
 
 const GOOGLE_MAPS_API_KEY = import.meta.env.VITE_GOOGLE_MAPS_API_KEY;
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:8000";
 
 const FALLBACK_CENTER = { lat: 48.13513, lng: 11.58198 }; // Munich
 const libraries = ["places"];
@@ -32,7 +34,7 @@ function MapPage({ user }) {
   useEffect(() => {
     if (!navigator.geolocation) {
       setStatus(
-        "Geolocation not supported. Using default location. Enter a destination to search for parking."
+        "Geolocation not supported. Using default location. Enter a destination to search for parking.",
       );
       return;
     }
@@ -56,7 +58,7 @@ function MapPage({ user }) {
       {
         enableHighAccuracy: true,
         timeout: 10000,
-      }
+      },
     );
   }, []);
 
@@ -67,8 +69,8 @@ function MapPage({ user }) {
 
       const nearestRes = await fetch(
         `${API_BASE_URL}/nearest?latitude=${encodeURIComponent(
-          latitude
-        )}&longitude=${encodeURIComponent(longitude)}&radius_m=500`
+          latitude,
+        )}&longitude=${encodeURIComponent(longitude)}&radius_m=500`,
       );
 
       if (!nearestRes.ok) {
@@ -83,7 +85,9 @@ function MapPage({ user }) {
         return;
       }
 
-      setStatus(`Found ${spots.length} parking spots. Estimating search times…`);
+      setStatus(
+        `Found ${spots.length} parking spots. Estimating search times…`,
+      );
 
       const estimates = await Promise.all(
         spots.map(async (spot) => {
@@ -110,7 +114,7 @@ function MapPage({ user }) {
             console.error("Estimate error for spot", spot.id, e);
             return null;
           }
-        })
+        }),
       );
 
       const mappedLocations = spots.map((spot, idx) => {
@@ -122,7 +126,8 @@ function MapPage({ user }) {
           id: spot.id,
           lat: spot.latitude,
           lng: spot.longitude,
-          waitingTime: roundedMinutes != null ? `${roundedMinutes} minutes` : "N/A",
+          waitingTime:
+            roundedMinutes != null ? `${roundedMinutes} minutes` : "N/A",
           label: spot.address || `Parking ${spot.id}`,
           distance_m: spot.distance_m,
           parkingType: spot.parking_type,
@@ -132,7 +137,7 @@ function MapPage({ user }) {
 
       setLocations(mappedLocations);
       setStatus(
-        `Showing ${mappedLocations.length} parking spots near your destination.`
+        `Showing ${mappedLocations.length} parking spots near your destination.`,
       );
       setError(null);
     } catch (e) {
@@ -159,7 +164,9 @@ function MapPage({ user }) {
 
     try {
       if (!autocompleteRef.current) {
-        throw new Error("Autocomplete is not ready yet. Try again in a second.");
+        throw new Error(
+          "Autocomplete is not ready yet. Try again in a second.",
+        );
       }
 
       const place = autocompleteRef.current.getPlace();
@@ -207,9 +214,7 @@ function MapPage({ user }) {
           <span className="header-username">
             {user?.name ? `Hi, ${user.name.split(" ")[0]}` : ""}
           </span>
-          <Link to="/profile" className="btn-secondary header-profile-btn">
-            Profile
-          </Link>
+          <ProfilePicture username={user.name} mail={user.mail} size={30} />
         </div>
       </header>
 
@@ -238,9 +243,7 @@ function MapPage({ user }) {
         >
           <span>{status}</span>
           {error && (
-            <span style={{ color: "#f97373", fontWeight: 500 }}>
-              • {error}
-            </span>
+            <span style={{ color: "#f97373", fontWeight: 500 }}>• {error}</span>
           )}
         </div>
 

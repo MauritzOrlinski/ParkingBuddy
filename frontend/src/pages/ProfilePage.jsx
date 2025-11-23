@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ProfilePicture from "../components/profileimg.jsx";
 
 function formatMinutesToHoursMinutes(totalMinutes) {
   if (!totalMinutes || totalMinutes <= 0) return "0 min";
@@ -19,7 +20,6 @@ function formatMinutesToHoursMinutes(totalMinutes) {
 function ProfilePage({ user, onLogout }) {
   const stats = user?.stats || {};
   var time = user?.saved_time;
-
   return (
     <div className="screen profile-screen">
       <header className="header header--with-back profile-header">
@@ -28,23 +28,23 @@ function ProfilePage({ user, onLogout }) {
         </Link>
         <div className="profile-henpm i @react-google-maps/apiader-center">
           <h1 className="logo profile-logo">My stats</h1>
-          <p className="profile-header-subtitle">Parking-aware time saved overview</p>
+          <p className="profile-header-subtitle">
+            Parking-aware time saved overview
+          </p>
         </div>
       </header>
 
       <main className="screen-main profile-main">
         {/* Profile identity card */}
         <section className="card profile-card">
-          <h2 className="profile-name">{user?.name || "Driver"}</h2>
-
+          <ProfilePicture username={user?.username} mail={user?.mail} />
           <div className="profile-email">
             <p>{user?.email || "test@email.com"}</p>
             <p>
               Driving with Parking Buddy since{" "}
               <span className="profile-email-highlight">private beta</span>
             </p>
-        </div>
-
+          </div>
         </section>
 
         {/* Time saved summary */}
@@ -56,8 +56,8 @@ function ProfilePage({ user, onLogout }) {
             {formatMinutesToHoursMinutes(time)}
           </p>
           <p className="profile-highlight-subtext">
-            Estimated time you didn&apos;t spend circling for parking, based on your
-            tracked trips.
+            Estimated time you didn&apos;t spend circling for parking, based on
+            your tracked trips.
           </p>
 
           <div className="stats-grid">
@@ -103,7 +103,10 @@ function ProfilePage({ user, onLogout }) {
           </ul>
         </section>
 
-        <button className="btn-danger full-width profile-logout-btn" onClick={onLogout}>
+        <button
+          className="btn-danger full-width profile-logout-btn"
+          onClick={onLogout}
+        >
           Log out
         </button>
       </main>
