@@ -289,58 +289,82 @@ function MapPage({ user, onUserUpdate }) {
         </div>
         {/* Destination search with Google Places Autocomplete */}
         <form
-          onSubmit={handleSearch}
-          style={{
-            position: "absolute",
-            top: "120px",
-            left: "50%",
-            transform: "translateX(-50%)",
-            zIndex: 20,
-            display: "flex",
-            gap: "8px",
-            padding: "4px 8px",
-            background: "rgba(15,23,42,0.9)",
-            borderRadius: "999px",
-            alignItems: "center",
-            maxWidth: "90%",
-          }}
-        >
-          <Autocomplete onLoad={onAutocompleteLoad}>
-            <input
-              type="text"
-              placeholder="Enter destination address"
-              value={address}
-              onChange={(e) => setAddress(e.target.value)}
-              style={{
-                flex: 1,
-                border: "none",
-                outline: "none",
-                padding: "8px 10px",
-                borderRadius: "999px",
-                fontSize: "14px",
-              }}
-            />
-          </Autocomplete>
-          <button
-            type="submit"
-            disabled={isSearching}
-            style={{
-              border: "none",
-              borderRadius: "999px",
-              padding: "8px 14px",
-              fontSize: "14px",
-              fontWeight: 500,
-              cursor: isSearching ? "default" : "pointer",
-              opacity: isSearching ? 0.7 : 1,
-              background:
-                "linear-gradient(135deg, rgba(59,130,246,1), rgba(129,140,248,1))",
-              color: "white",
-              whiteSpace: "nowrap",
-            }}
-          >
-            {isSearching ? "Searching…" : "Search parking"}
-          </button>
-        </form>
+  onSubmit={handleSearch}
+  style={{
+    position: "absolute",
+    top: "120px",
+    left: "50%",
+    transform: "translateX(-50%)",
+    zIndex: 20,
+    display: "flex",
+    gap: "10px",
+    // top | right | bottom | left  → no right padding so button can touch edge
+    padding: "10px 0 10px 14px",
+    background: "rgba(15,23,42,0.85)",
+    borderRadius: "999px",
+    alignItems: "center",
+    width: "90%",
+    maxWidth: "480px",
+    boxShadow: "0 12px 32px rgba(15,23,42,0.65)",
+    backdropFilter: "blur(12px)",
+    border: "1px solid rgba(148,163,184,0.35)",
+  }}
+>
+  <Autocomplete onLoad={onAutocompleteLoad}>
+    <input
+      type="text"
+      placeholder="Enter destination address"
+      value={address}
+      onChange={(e) => setAddress(e.target.value)}
+      style={{
+        flexGrow: 1,
+        flexShrink: 1,
+        flexBasis: "auto",
+
+        border: "1px solid rgba(148,163,184,0.35)",
+        outline: "none",
+        padding: "10px 14px",
+        borderRadius: "999px",
+        fontSize: "14px",
+        background: "rgba(2,6,23,0.65)",
+        color: "#e5e7eb",
+        boxShadow: "0 4px 12px rgba(0,0,0,0.25) inset",
+      }}
+      onFocus={(e) => {
+        e.target.style.borderColor = "#60a5fa";
+        e.target.style.boxShadow =
+          "0 0 0 2px rgba(96,165,250,0.6), 0 4px 12px rgba(0,0,0,0.25) inset";
+      }}
+      onBlur={(e) => {
+        e.target.style.borderColor = "rgba(148,163,184,0.35)";
+        e.target.style.boxShadow = "0 4px 12px rgba(0,0,0,0.25) inset";
+      }}
+    />
+  </Autocomplete>
+
+  <button
+    type="submit"
+    disabled={isSearching}
+    style={{
+      border: "none",
+      borderRadius: "999px",
+      padding: "10px 18px",
+      fontSize: "14px",
+      fontWeight: 600,
+      cursor: isSearching ? "default" : "pointer",
+      opacity: isSearching ? 0.7 : 1,
+      background:
+        "linear-gradient(135deg, rgba(59,130,246,1), rgba(129,140,248,1))",
+      color: "white",
+      boxShadow: "0 8px 20px rgba(37,99,235,0.35)",
+      whiteSpace: "nowrap",
+    }}
+  >
+    {isSearching ? "Searching…" : "Search"}
+  </button>
+</form>
+
+
         {userLocation && (
           <MapComponent
             apiKey={GOOGLE_MAPS_API_KEY}
