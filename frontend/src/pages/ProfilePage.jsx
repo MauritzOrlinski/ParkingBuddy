@@ -39,6 +39,7 @@ function ProfilePage({ user, onLogout }) {
         <section className="card profile-card">
           <ProfilePicture username={user?.username} mail={user?.mail} />
           <div className="profile-email">
+            <h>{user?.username || "test"}</h>
             <p>{user?.email || "test@email.com"}</p>
             <p>
               Driving with Parking Buddy since{" "}
