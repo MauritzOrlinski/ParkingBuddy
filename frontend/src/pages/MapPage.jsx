@@ -202,7 +202,6 @@ function MapPage({ user, onUserUpdate }) {
       console.warn("No auth token; cannot record history event.");
       return;
     }
-    savedTimeMinutes = 999; // TEMPORARY OVERRIDE FOR DEMO PURPOSES
     try {
       const res = await fetch(`${API_BASE_URL}/history`, {
         method: "POST",
